@@ -1,0 +1,49 @@
+<p class="email-blurb">Want to save your favorite drinks for later? Enter your email and get them sent straight to your inbox!</p>
+
+{{!-- <a href="/email" id="emailBtn"><h4>Click to email to yourself</h4></a> --}}
+
+{{!-- <div class="jumbotron jumbsize-login"> --}}
+<form class= "email-input">
+  <div class="form-group">
+    <label for="inputEmail" class ="color-white">Email address</label>
+    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+  <a href="/"><button type="submit" class="btn btn-primary" id="sendEmailBtn">Send</button></a>
+</form>
+
+
+{{!-- <div> --}}
+  
+  
+  <div class="jumbo2-saved">
+  {{#each savedDrinks}}
+ 
+ <div class="jumbotron jumbo3-saved" style="padding-bottom:10%;">
+   <i id="{{this.id}}" class="fas fa-trash-alt trashCanBtn removebtn"></i>
+    {{!-- <button type="button" id="{{this.id}}" class="removebtn"><i id="{{this.id}}" class="fas fa-trash-alt"></i></button> --}}
+    <h3 class="subheader-details">{{this.name}}</h3>
+    <div class="row">
+    <div class="col-md-7">
+    <img src="{{this.image}}" class="details-img-size" alt="Drink">
+    </div>
+    <div class= "col-md-5 details-body">
+      <h4>INGREDIENTS:</h4>
+      <ul>
+        {{#each this.ingredients}}
+          <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    </div>
+    <div class= "instructions-div">
+      <h4>INSTRUCTIONS:</h4>
+      <p>{{this.instructions}}</p>
+    {{!-- {{#if this.top5}}
+      <a href="" id="{{this.id}}" class="btn btn-primary">Save for Later</a>
+    {{/if}} --}}
+    </div>
+  </div>
+  </div>
+  {{/each}}
+  </div> 
+  {{!-- </div> --}}

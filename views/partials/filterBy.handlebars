@@ -1,0 +1,17 @@
+<h1 class="subheader">Search Results</h1>
+
+<div class="card-container">
+{{#each searchData}}
+<div class="card" data="" id="{{this.idDrink}}" style="width: 18rem; height: 95%">
+  <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+  <div class="card-body">
+    <div class="col text-center">
+      <a href="" class= "drinkDetailsLink">
+        <h5 class="card-title" id= "{{this.name}}">{{this.name}}</h5>
+      </a>
+      <a href="" id="{{this.id}}" class="btn btn-primary saveBtn">Save for Later</a>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>

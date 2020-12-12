@@ -1,0 +1,48 @@
+{{>jumbotron}}
+{{>navbar}}
+
+{{#if top5Drinks}}
+    <h1 class = "subheader">Top 5 Drinks</h1>
+    {{>details drink=top5Drinks}}
+{{/if}}
+
+
+    {{#if searchResults}}
+        {{>searchResults searchResults=searchResults}}
+    {{/if}}
+
+        {{#if searchByIngredient}}
+            {{>filterBy searchData=searchByIngredient}}
+        {{/if}}
+        {{#if searchByDrinkName}}
+            {{>filterBy searchData=searchByDrinkName}}
+        {{/if}}
+
+        {{#if featuredDrinks}}
+            {{>featuredDrinks featuredDrinks=featuredDrinks}}
+        {{/if}}
+
+        {{#if savedDrinkDetails}}
+            <h1 class = "subheader">Saved Drinks</h1>
+            {{>savedDrinks savedDrinks = savedDrinkDetails}}
+        {{/if}}
+
+        {{#if drinkDetails}}
+            <h1 class = "subheader">Drink Details</h1>
+            {{>details drink = drinkDetails}}
+        {{/if}}
+
+        {{#if login}}
+            {{>login}}
+        {{/if}}
+
+        {{#if email}}
+            {{>email}}
+        {{/if}}
+
+        {{#if noResults}}
+            {{>noResults}}
+        {{/if}}
+            
+        {{>footer}}
+

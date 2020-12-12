@@ -1,1 +1,1 @@
-# quarantini-p2
+# project2-cocktails

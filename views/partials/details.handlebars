@@ -1,0 +1,34 @@
+
+<div class="card-top5">
+  {{#each drink}}
+ 
+ <div class="jumbotron jumbo2">
+    <h3 class="subheader-details">{{this.name}}</h3>
+    <div class="row">
+    <div class="col-md-7">
+    <img src="{{this.image}}" class="details-img-size" alt="Drink">
+    </div>
+    <div class= "col-md-5 details-body">
+      <h4>INGREDIENTS:</h4>
+      <ul>
+        {{#each this.ingredients}}
+          <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    </div>
+    <div class= "instructions-div">
+      <h4>INSTRUCTIONS:</h4>
+      <div>
+      <p>{{this.instructions}}</p>
+      </div>
+      {{!-- <ul>
+        <li>filler</li>
+        <li>filler</li>
+        <li>filler</li>
+      </ul> --}}
+    <small class="text-muted"><a href="#" class="btn btn-primary button-color saveBtn" id="{{this.id}}" style="box-shadow: 2px 2px 4px black">Save this Drink!</a></small>
+    </div>
+  </div>
+  </div>
+  {{/each}}
+  </div> 
